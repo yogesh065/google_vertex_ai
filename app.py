@@ -107,18 +107,7 @@ def generate(
       if results:
         yield results
 
-with gr.Blocks(theme=utils.custom_theme) as demo:
-  with gr.Row():
-    gr.HTML(utils.public_access_warning)
-  with gr.Row():
-    with gr.Column(scale=1):
-      with gr.Row():
-        gr.HTML("<h2>Welcome to Vertex AI GenAI App!</h2>")
-      with gr.Row():
-        gr.HTML("""This prototype was built using your Vertex AI Studio prompt.
-            Follow the steps and recommendations below to begin.""")
-      with gr.Row():
-        gr.HTML(utils.next_steps_html)
+
 
     with gr.Column(scale=2, variant="panel"):
       gr.ChatInterface(
